@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:LightCoral;
+}
+
+.container {
+  max-width: 950px;
+  width: 100%;
+  border-radius: 12px;
+  background: #fff;
+  padding: 40px 50px 40px 40px;
+  margin: 0 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container .main-title {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.container .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container .content .list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 20%;
+  margin: 50px;
+}
+
+.content .list label {
+  height: 60px;
+  font-size: 22px;
+  border-radius: 12px;
+  line-height: 60px;
+  margin: 5px 0;
+  padding-left: 25px;
+  color: #333;
+  cursor: pointer;
+  z-index: 12;
+  transition: all 0.4s ease;
+  background: none;
+}
+
+.content .list label:hover {
+  background:#1E90FF;
+  color: #fff;
+}
+
+.content .list label {
+  position: relative;
+}
+
+#home:checked ~ .list .home,
+#blog:checked ~ .list .blog,
+#help:checked ~ .list .help,
+#code:checked ~ .list .code,
+#about:checked ~ .list .about {
+  background:#1E90FF;
+  color: #fff;
+}
+
+.container input[type="radio"] {
+  display: none;
+}
+
+.container .content .text-content {
+  width: 80%;
+  height: 100%;
+}
+
+.content .text-content .text {
+  display: none;
+}
+
+#home:checked ~ .text-content .home,
+#blog:checked ~ .text-content .blog,
+#help:checked ~ .text-content .help,
+#code:checked ~ .text-content .code,
+#about:checked ~ .text-content .about {
+  display: block;
+}
+
+.content .text-content .title {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.content .text-content p {
+  text-align: justify;
+}
